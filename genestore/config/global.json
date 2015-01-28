@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "_default": {
+            "link": "genestore"
+        }, 
+        "genestore": {
+            "applicationId": "PFvDSHzvwjo0N3gE3SPzAjtLvr8BaRZBtRaED3um", 
+            "masterKey": "O60lKGZrbhBnqOo8jFlMMQZlDW0RY7Z5LsYTck68"
+        }
+    }
+}
