@@ -1,10 +1,17 @@
+var app=require('cloud/app.js');
 var creds = require('cloud/creds.js');
 var fauxPoe = require('cloud/faux-poe.js');
 var Mandrill = require('mandrill');
 Mandrill.initialize(creds.mandrill );
 
 Parse.Cloud.job("printCreds", function(request, response){
-  console.log(creds);
+  console.log(JSON.stringify(process.env));
+  if (response.error){
+    response.error("creds no creds");
+  } else {
+    response.success("credentials!");
+  }
+  
 });
 
 Parse.Cloud.job("sendMail",function(request,response){
